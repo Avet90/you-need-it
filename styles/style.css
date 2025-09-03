@@ -4,7 +4,7 @@ body {
     font-weight: 400;
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
-
+    gap: 50px;
 }
 
 h1, 
@@ -87,3 +87,14 @@ blockquote {
     text-underline-offset: 3px; /* Отступ подчеркивания от текста */
 }
 
+.cover{
+    display: grid;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+        url('/images/lotus-flower.png');
+    background-repeat: round;
+    z-index: -1;
+    height: 757px;
+    color: white;
+    gap: 20px;
+}
