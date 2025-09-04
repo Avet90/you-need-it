@@ -1,10 +1,11 @@
 body {
     margin: 0;
+    box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+    font-weight: 250;
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
-    gap: 50px;
+    grid-template-rows: auto; /* вместо фиксированных比例 */
+    min-height: 100vh;
 }
 
 h1, 
@@ -28,6 +29,7 @@ blockquote {
     width: 1340px;
     height: 109px;
     place-self: end center;
+    padding: 105px 0;
 }
 
 .header__menu{
@@ -90,11 +92,72 @@ blockquote {
 .cover{
     display: grid;
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('/images/lotus-flower.png');
-    background-repeat: round;
-    z-index: -1;
+    background-size: cover;
     height: 757px;
     color: white;
     gap: 20px;
+    text-transform: uppercase;
+    margin: 0; /* на всякий случай */
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.cover__title{
+    display: grid;
+    place-self: end center;
+    width: 1340px;
+    max-height: 355px;
+    font-size: 100px;
+    letter-spacing: 0.30em;
+    gap: 20px;
+}
+
+.aligned-text{
+    justify-self: start;
+}
+
+
+.aligned-text_center{
+    justify-self: center;
+}
+
+.aligned-text_right{
+    justify-self: end;
+}
+
+.letter-spacing-extended{
+    letter-spacing: 0.60em;
+}
+
+.no-letter-spacing{
+    letter-spacing: 0em;
+}
+
+.cover__description{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 1340px;
+    justify-self: center;
+}
+
+.cover__description-text{
+    display: grid;
+    place-self: center end;
+    font-size: 22px;
+    word-spacing: 25px;
+}
+
+.bet-button{
+    width: 257px;
+    height: 52px;
+    place-self: center end;
+    font-size: 22px;
+    background-color: transparent; /* прозрачный фон */
+    border: 1px solid #ffffff; /* видимая рамка */
+    color: #ffffff; /* цвет текста */
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
 }
